@@ -7,7 +7,7 @@ function Course() {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/classes");
+        const res = await axios.get("https://melodic-mastery-api.vercel.app/classes");
         console.log(res.data);
         setBook(res.data);
       } catch (error) {
