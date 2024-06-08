@@ -25,11 +25,13 @@ function Course() {
             <span className="text-pink-500"> Here! :)</span>
           </h1>
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-4">
-          {book.map((item) => (
-            <Cards key={item.id} item={item} />
-          ))}
-        </div>
+        {book ?
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-4">
+            {book.map((item) => (
+              <Cards key={item.id} item={item} />
+            ))}
+          </div>
+          : <div>Loading</div>}
       </div>
     </>
   );
