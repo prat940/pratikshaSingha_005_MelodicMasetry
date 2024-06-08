@@ -14,9 +14,13 @@ function App() {
       <div className="dark:bg-slate-900 dark:text-white">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
+          {/* <Route
             path="/classes"
             element={authUser ? <Courses /> : <Navigate to="/signup" />}
+          /> */}
+          <Route
+            path="/classes"
+            element={<Courses />}
           />
           <Route path="/signup" element={<Signup />} />
         </Routes>
